@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter program</title>
+    <style>
+        #myh1 {
+            font-size: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #div {
+            text-align: center;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            font-size: 1.5em;
+            color: white;
+            background-color: hsl(214, 100%, 74%);
+            border-radius: 5px;
+            cursor: pointer;
+
+            transition: background-color 0.25s;
+        }
+
+        .btn:hover {
+            background-color: hsl(214, 100%, 56%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="myh1">0</h1>
+    <div id="div">
+        <button id="Increase" class="btn">Increase</button>
+        <button id="Reset" class="btn">Reset</button>
+        <button id="Decrease" class="btn">Decrease</button>
+    </div>
+</body>
+<script>
+    const Decrease = document.getElementById("Decrease")
+    const Increase = document.getElementById("Increase")
+    const Reset = document.getElementById("Reset")
+    const countlabel = document.getElementById("myh1")
+    let count = 0
+    Increase.onclick = function () {
+        count++;
+        countlabel.textContent = count
+    }
+    Decrease.onclick = function () {
+        count--;
+        countlabel.textContent = count
+    }
+    Reset.onclick = function () {
+        count = 0;
+        countlabel.textContent = count
+    }
+</script>
+
+</html>
