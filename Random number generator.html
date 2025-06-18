@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random number generator</title>
+    <style>
+        #roll {
+            height: 55px;
+            width: 150px;
+            color: white;
+            background-color: rgb(138, 138, 159);
+            font-size: 1.5em;
+            position: absolute;
+            top: 400px;
+            border-radius: 5px;
+            right: 45%;
+        }
+        #output1{
+            position: absolute;
+            font-size: 100px;
+            top: 100px;
+            right: 50%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #output2{
+            position: absolute;
+            font-size: 100px;
+            top: 200px;
+            right: 50%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #output3{
+            position: absolute;
+            font-size: 100px;
+            right: 50%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .class{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="class">
+
+        <h1 id="output1">0</h1>
+        <h1 id="output2">0</h1>
+        <h1 id="output3">0</h1>
+        <button id="roll">Roll</button>
+    </div>
+</body>
+<script>
+    let randomnum2
+    let randomnum3
+    let randomnum1
+   let min = 1
+   let max = 6
+    document.getElementById("roll").onclick = function(){
+         randomnum1 = Math.floor(Math.random() * max + min)
+         randomnum2 = Math.floor(Math.random() * max + min)
+         randomnum3 = Math.floor(Math.random() * max + min)
+        document.getElementById("output1").textContent = randomnum1
+        document.getElementById("output2").textContent = randomnum2
+        document.getElementById("output3").textContent = randomnum3
+    }
+</script>
+
+</html>

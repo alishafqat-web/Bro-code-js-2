@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age in webpage</title>
+    <style>
+        #myh1{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <label for="" id="mylabel">Enter your age </label>
+    <input type="text" name="" id="mytext"><br><br>
+    <button id="sub">Submit</button>
+    <h1 id="myh1"></h1>
+</body>
+<script>
+    let mylabel = document.getElementById("mylabel");
+    let myh1 = document.getElementById("myh1");
+    document.getElementById("sub").onclick = function () {
+        let mytext = Number(document.getElementById("mytext").value);
+
+        if (mytext < 0) {
+            myh1.textContent = "Your age can't be below 0";
+        }
+        else if (mytext === 0) {
+            myh1.textContent = "You can't enter this site, you were just born";
+        }
+        else if (mytext >= 100) {
+            myh1.textContent = "You are too old to enter this site";
+        }
+        else if (mytext >= 18) {
+            myh1.textContent = "You are old enough to enter this site";
+        }
+        else {
+            myh1.textContent = "You must be 18+ to enter the site";
+        }
+    }
+</script>
+</html>

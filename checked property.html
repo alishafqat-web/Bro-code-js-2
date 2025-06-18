@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checked property</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #submit{
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="Card" id="mycheckbox">
+    <label for="mycheckbox">Subscribe</label><br>
+    <input type="radio" name="Card" id="visabtn">
+    <label for="mycheckbox">Visa</label><br>
+    <input type="radio" name="Card" id="mastercardbtn">
+    <label for="mycheckbox">Master Card</label><br>
+    <input type="radio" name="Card" id="paypalbtn">
+    <label for="mycheckbox">Paypal</label><br><br>
+    <button id="submit">submit</button>
+    <p id="subresult"></p>
+    <p id="paymentresult"></p>
+</body>
+<script>
+    const mycheckbox = document.getElementById("mycheckbox")
+    const paypalbtn = document.getElementById("paypalbtn")
+    const visabtn = document.getElementById("visabtn")
+    const mastercardbtn = document.getElementById("mastercardbtn")
+    const submit = document.getElementById("submit")
+    const subresult = document.getElementById("subresult")
+    const paymentresult = document.getElementById("paymentresult")
+    submit.onclick = function(){
+        if(mycheckbox.checked){
+            subresult.textContent = "You are subscribed"
+        }
+        else{
+            subresult.textContent = "You are not subscribed"
+        }
+        if(paypalbtn.checked){
+            paymentresult.textContent = "You are doing payment by Paypal"
+        }
+        if(mastercardbtn.checked){
+            paymentresult.textContent = "You are doing payment by Mastercard"
+        }
+        if(visabtn.checked){
+            paymentresult.textContent = "You are doing payment by visa"
+        }
+        else{
+            paymentresult.textContent = "Please select a payment method"
+        }
+    }
+</script>
+</html>
