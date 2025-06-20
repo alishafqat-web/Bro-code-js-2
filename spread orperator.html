@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spread orperator</title>
+</head>
+<body>
+    
+</body>
+<script>
+//     
+// 
+//    spreadoperator = ...allows an iterable such as an
+//                        or string to be expanded
+//                        into seperate elements
+//                        (unpacks the ele•ents)
+    let numbers = [1,2,3,4,5]
+    let maximum = Math.max(...numbers)
+    let minimum = Math.min(...numbers)
+    console.log(maximum);
+    console.log(minimum);
+    let username = "M.Ali Shafqat"
+    let letters = [...username].join("-")
+    console.log(letters);
+
+    let fruits = ["apple", "orange", "banana"]
+    let vegetables = ["carrot", "tomato","potato"]
+    let newfruits = [...fruits, ...vegetables]
+    console.log(newfruits);
+</script>
+</html>

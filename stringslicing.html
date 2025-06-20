@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stringslicing</title>
+</head>
+<body>
+    
+</body>
+<script>
+ const fullname = "M.Ali Shafqat"
+//  let firstname = fullname.slice(0, 5)
+ let alstname = fullname.slice(6)
+
+ console.log(alstname);
+ let firstcahr = fullname.slice(0, 1)
+ console.log(firstcahr)
+ let lastchar = fullname.slice(-1)
+ console.log(lastchar);
+ let firstname = fullname.slice(0, fullname.indexOf(" "))
+ let lastname = fullname.slice( fullname.indexOf(" ")+1)
+ console.log(firstname);
+ console.log(lastname);
+
+
+ const email = "alishfqt478@gmail.com"
+ let username = email.slice(0, email.indexOf("@"))
+ let extension = email.slice(email.indexOf("@")+1)
+ console.log(username);
+ console.log(extension);
+ console.log();
+</script>
+</html>

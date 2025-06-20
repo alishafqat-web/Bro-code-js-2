@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Functions</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+    function happybir(username, age) {
+        console.log("Happy birthday to you");
+        console.log("Nobody likes you ");
+        console.log("Go back to the zoo");
+        console.log(`Happy birthday dear ${username}`);
+        console.log(`${username} is ${age} years old`);
+        console.log("Happy birthday to you");
+    }
+    happybir("Ali", 12)
+
+
+
+
+
+
+    function add(x, y) {
+        let result = x + y
+        return result
+    }
+    console.log(add(20, 30));
+    function subract (x, y){
+     return x - y
+    }
+    function multiply(x, y){
+        return x * y
+ }
+ console.log(multiply(20, 30));
+ function divide(x, y){
+     return x / y
+}
+console.log(divide(100, 10));
+
+function iseven(number){
+    if(number % 2 === 0 ){
+       return "Even"
+    }
+    else{
+        return "Odd"
+    }
+}
+console.log(iseven(1));
+function isvailademail(email){
+    if(email.includes("@", ".")){
+        return "Vaild"
+    }
+    else{
+        return "Invaild"
+    }
+}
+console.log(isvailademail("alishfqt478@gamil.com"));
+</script>
+
+</html>

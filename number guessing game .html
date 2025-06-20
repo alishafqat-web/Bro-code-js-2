@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number guessing game </title>
+</head>
+<body>
+    
+</body>
+<script>
+  const min = 50
+  const max = 100
+  let attempt = 0
+  let guess
+  let running = true
+  while(running = true){
+      let asnswer = Math.floor( Math.random() * (max - min + 1)  + min )
+      guess = window.prompt(`Guess a number between ${min} - ${max}`)
+      guess = Number(guess)
+    if(isNaN(guess)){
+       window.alert("Please enter a vailad number ")
+    }
+    else if(guess > max || guess < min){
+        window.alert("Please enter a vailad number ")
+    }
+    else{
+        attempt++
+        if(guess < asnswer){
+            window.alert("TOO LOW ! TRY AGAIN")
+        }
+        else if (guess > asnswer){
+            window.alert("TOO HIGH ! TRY AGAIN");
+            
+        }
+        else{
+            window.alert(`CORRECT ! The answer was ${asnswer}. It took you ${attempt} attempts`)
+            running = false
+        }
+    }
+  }
+</script>
+</html>

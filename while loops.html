@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While loops</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // While loops repeat some code WHILE some condition is true
+     let loggedin = false
+     let username
+     let password
+     do {
+        username = window.prompt("Enter your username ")
+        password = window.prompt("Enter your password ")
+
+        if(username === "myusername" && password === "mypassword"){
+            loggedin = true
+            console.log("You are logged in !");
+        }
+        else{
+            console.log("Invailid credentials ! Please try again   ");
+        }
+     } while (!loggedin)
+</script>
+</html>

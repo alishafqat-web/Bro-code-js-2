@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let username = "M Ali"
+    // console.log(username.charAt(0)); 
+    // console.log(username.indexOf("i"));
+    // console.log(username.lastIndexOf("i"));
+    // console.log(username.length);
+    // username = username.trim()
+    // username = username.toUpperCase()
+    // username = username.repeat(80) 
+    // let result = username.startsWith(" ")
+    // console.log(username);
+    // console.log(result);
+    let result = username.endsWith("  ")
+
+    if (result) {
+        console.log("Your username can't end with  ' ' ");
+
+    }
+    else {
+        console.log(username);
+
+    }
+    let result2 = username.includes(" ")
+    if (result2) {
+        console.log("Your username can't include with  ' ' ");
+
+    }
+    else {
+
+        console.log(username);
+
+    }
+    let phonenumber = " 03328549726"
+    console.log(phonenumber.length);
+    
+    phonenumber = phonenumber.replace("0", "+92")
+    console.log(phonenumber);
+    let phonenumber2 = phonenumber.padEnd(7 , "0")
+    console.log(phonenumber2);
+    
+</script>
+
+</html>
