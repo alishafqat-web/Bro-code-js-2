@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // .map() =  accepts a callback and applies that function
+    //           to each element of an array, then return a new array
+
+    const numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+    const squared = numbers.map(square)
+    const cubes = numbers.map(cube)
+    console.log(cubes);
+    console.log(squared);
+    function square(element) {
+        return Math.pow(element, 2)
+    }
+    function cube (element) {
+        return Math.pow(element, 3)
+    }
+
+    const students = ["Ali", "Sara", "Omar", "Zara", "Usman"];
+    const studentsUpper = students.map(uppercase)
+    const studentslowe = students.map(lowercase)
+    console.log(studentsUpper);
+    console.log(studentslowe);
+     function uppercase (element){
+     return element.toUpperCase()
+     }
+     function lowercase (element){
+     return element.toLowerCase()
+     }
+
+
+
+     const dates = ["2025-06-23", "2025-07-01", "2025-07-15", "2025-08-01", "2025-08-15"];
+     const formds = dates.map(formd)
+     console.log(formds);
+     function formd(element){
+      const parts = element.split("-")
+      return `${parts[2]}/${parts[1]}/${parts[0]}`
+     }
+</script>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self [projetct 1</title>
+</head>
+<body>
+    <label for="t1">Enter number</label>
+    <input type="text" name="" id="t1"><br><br><br>
+    <button id="gen">Generate</button>
+    <h1 id="h1"></h1>
+</body>
+<script>
+    let h1 = document.getElementById("h1");
+
+    document.getElementById("gen").onclick = function () {
+        let t1 = document.getElementById("t1").value;
+
+        if (t1.includes("000")) {
+            let t2 = t1 + "K";
+            h1.textContent = t2;
+        if(t1.includes("00000")){
+        let t3 = t1 + "M"
+        h1.textContent = t3
+        }
+        if(t1.includes("000000000")){
+        let t4 = t1 - "000000000" + "B"
+        h1.textContent = t4
+        }
+    }
+}
+</script>
+</html>
